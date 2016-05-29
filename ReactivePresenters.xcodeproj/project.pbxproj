@@ -1,0 +1,353 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC076EBC1CFB5E6C00994752 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC076EBB1CFB5E6C00994752 /* Presenter.swift */; };
+		CC076EC01CFB5F8600994752 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC076EBE1CFB5F8600994752 /* ReactiveCocoa.framework */; };
+		CC076EC11CFB5F8700994752 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC076EBF1CFB5F8600994752 /* Result.framework */; };
+		CC3651A01CFB626F008746F9 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC36519F1CFB626F008746F9 /* PresenterProtocol.swift */; };
+		CC3651A41CFB65F3008746F9 /* AnonymousPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3651A31CFB65F3008746F9 /* AnonymousPresenter.swift */; };
+		CC3651A61CFB675E008746F9 /* SerialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3651A51CFB675E008746F9 /* SerialPresenter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CC076EB01CFB5DA800994752 /* ReactivePresenters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactivePresenters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC076EBB1CFB5E6C00994752 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		CC076EBE1CFB5F8600994752 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		CC076EBF1CFB5F8600994752 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		CC36519F1CFB626F008746F9 /* PresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
+		CC3651A31CFB65F3008746F9 /* AnonymousPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnonymousPresenter.swift; sourceTree = "<group>"; };
+		CC3651A51CFB675E008746F9 /* SerialPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialPresenter.swift; sourceTree = "<group>"; };
+		CC3651A81CFB6CA6008746F9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC076EAC1CFB5DA800994752 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC076EC01CFB5F8600994752 /* ReactiveCocoa.framework in Frameworks */,
+				CC076EC11CFB5F8700994752 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC076EA61CFB5DA800994752 = {
+			isa = PBXGroup;
+			children = (
+				CC076EB21CFB5DA800994752 /* ReactivePresenters */,
+				CC076EC21CFB5F9200994752 /* Frameworks */,
+				CC076EB11CFB5DA800994752 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC076EB11CFB5DA800994752 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC076EB01CFB5DA800994752 /* ReactivePresenters.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC076EB21CFB5DA800994752 /* ReactivePresenters */ = {
+			isa = PBXGroup;
+			children = (
+				CC36519F1CFB626F008746F9 /* PresenterProtocol.swift */,
+				CC076EBB1CFB5E6C00994752 /* Presenter.swift */,
+				CC3651A31CFB65F3008746F9 /* AnonymousPresenter.swift */,
+				CC3651A51CFB675E008746F9 /* SerialPresenter.swift */,
+				CC3651A71CFB6CA6008746F9 /* Supporting Files */,
+			);
+			path = ReactivePresenters;
+			sourceTree = "<group>";
+		};
+		CC076EC21CFB5F9200994752 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC076EBE1CFB5F8600994752 /* ReactiveCocoa.framework */,
+				CC076EBF1CFB5F8600994752 /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC3651A71CFB6CA6008746F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC3651A81CFB6CA6008746F9 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CC076EAD1CFB5DA800994752 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CC076EAF1CFB5DA800994752 /* ReactivePresenters */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC076EB81CFB5DA800994752 /* Build configuration list for PBXNativeTarget "ReactivePresenters" */;
+			buildPhases = (
+				CC076EAB1CFB5DA800994752 /* Sources */,
+				CC076EAC1CFB5DA800994752 /* Frameworks */,
+				CC076EAD1CFB5DA800994752 /* Headers */,
+				CC076EAE1CFB5DA800994752 /* Resources */,
+				CC076EBD1CFB5F4F00994752 /* Copy Carthage Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReactivePresenters;
+			productName = ReactivePresenters;
+			productReference = CC076EB01CFB5DA800994752 /* ReactivePresenters.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC076EA71CFB5DA800994752 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Ilya Laryionau";
+				TargetAttributes = {
+					CC076EAF1CFB5DA800994752 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = CC076EAA1CFB5DA800994752 /* Build configuration list for PBXProject "ReactivePresenters" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CC076EA61CFB5DA800994752;
+			productRefGroup = CC076EB11CFB5DA800994752 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC076EAF1CFB5DA800994752 /* ReactivePresenters */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC076EAE1CFB5DA800994752 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CC076EBD1CFB5F4F00994752 /* Copy Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			name = "Copy Carthage Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC076EAB1CFB5DA800994752 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC3651A61CFB675E008746F9 /* SerialPresenter.swift in Sources */,
+				CC3651A41CFB65F3008746F9 /* AnonymousPresenter.swift in Sources */,
+				CC3651A01CFB626F008746F9 /* PresenterProtocol.swift in Sources */,
+				CC076EBC1CFB5E6C00994752 /* Presenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CC076EB61CFB5DA800994752 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CC076EB71CFB5DA800994752 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CC076EB91CFB5DA800994752 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ReactivePresenters/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ilya-laryionau.ReactivePresenters";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC076EBA1CFB5DA800994752 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ReactivePresenters/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ilya-laryionau.ReactivePresenters";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC076EAA1CFB5DA800994752 /* Build configuration list for PBXProject "ReactivePresenters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC076EB61CFB5DA800994752 /* Debug */,
+				CC076EB71CFB5DA800994752 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC076EB81CFB5DA800994752 /* Build configuration list for PBXNativeTarget "ReactivePresenters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC076EB91CFB5DA800994752 /* Debug */,
+				CC076EBA1CFB5DA800994752 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC076EA71CFB5DA800994752 /* Project object */;
+}
