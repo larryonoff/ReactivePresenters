@@ -13,6 +13,14 @@
 		CC3651A01CFB626F008746F9 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC36519F1CFB626F008746F9 /* PresenterProtocol.swift */; };
 		CC3651A41CFB65F3008746F9 /* AnonymousPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3651A31CFB65F3008746F9 /* AnonymousPresenter.swift */; };
 		CC3651A61CFB675E008746F9 /* SerialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3651A51CFB675E008746F9 /* SerialPresenter.swift */; };
+		CCEB83821D00AF13001283FC /* UIBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB83811D00AF13001283FC /* UIBarButton.swift */; };
+		CCEB83861D00AF4C001283FC /* ReactivePresenters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC076EB01CFB5DA800994752 /* ReactivePresenters.framework */; };
+		CCEB83871D00AF5A001283FC /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC076EBE1CFB5F8600994752 /* ReactiveCocoa.framework */; };
+		CCEB83881D00AF5A001283FC /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC076EBF1CFB5F8600994752 /* Result.framework */; };
+		CCEB838A1D00AFC6001283FC /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB83891D00AFC6001283FC /* UIButton.swift */; };
+		CCEB838C1D00AFFB001283FC /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB838B1D00AFFB001283FC /* UIControl.swift */; };
+		CCEB838E1D00B036001283FC /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB838D1D00B036001283FC /* UILabel.swift */; };
+		CCEB83901D00B088001283FC /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB838F1D00B088001283FC /* UITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,13 @@
 		CC3651A31CFB65F3008746F9 /* AnonymousPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnonymousPresenter.swift; sourceTree = "<group>"; };
 		CC3651A51CFB675E008746F9 /* SerialPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialPresenter.swift; sourceTree = "<group>"; };
 		CC3651A81CFB6CA6008746F9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCEB83791D00AEF7001283FC /* ReactiveCocoaPresenters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveCocoaPresenters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCEB83811D00AF13001283FC /* UIBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButton.swift; sourceTree = "<group>"; };
+		CCEB83841D00AF2E001283FC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCEB83891D00AFC6001283FC /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		CCEB838B1D00AFFB001283FC /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
+		CCEB838D1D00B036001283FC /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		CCEB838F1D00B088001283FC /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +51,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CCEB83751D00AEF7001283FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCEB83881D00AF5A001283FC /* Result.framework in Frameworks */,
+				CCEB83861D00AF4C001283FC /* ReactivePresenters.framework in Frameworks */,
+				CCEB83871D00AF5A001283FC /* ReactiveCocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -43,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				CC076EB21CFB5DA800994752 /* ReactivePresenters */,
+				CCEB837A1D00AEF7001283FC /* ReactiveCocoaPresenters */,
 				CC076EC21CFB5F9200994752 /* Frameworks */,
 				CC076EB11CFB5DA800994752 /* Products */,
 			);
@@ -52,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				CC076EB01CFB5DA800994752 /* ReactivePresenters.framework */,
+				CCEB83791D00AEF7001283FC /* ReactiveCocoaPresenters.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,10 +112,38 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CCEB837A1D00AEF7001283FC /* ReactiveCocoaPresenters */ = {
+			isa = PBXGroup;
+			children = (
+				CCEB83811D00AF13001283FC /* UIBarButton.swift */,
+				CCEB83891D00AFC6001283FC /* UIButton.swift */,
+				CCEB838B1D00AFFB001283FC /* UIControl.swift */,
+				CCEB838D1D00B036001283FC /* UILabel.swift */,
+				CCEB838F1D00B088001283FC /* UITextField.swift */,
+				CCEB83831D00AF2E001283FC /* Supporting Files */,
+			);
+			path = ReactiveCocoaPresenters;
+			sourceTree = "<group>";
+		};
+		CCEB83831D00AF2E001283FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCEB83841D00AF2E001283FC /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
 		CC076EAD1CFB5DA800994752 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCEB83761D00AEF7001283FC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -117,6 +172,24 @@
 			productReference = CC076EB01CFB5DA800994752 /* ReactivePresenters.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		CCEB83781D00AEF7001283FC /* ReactiveCocoaPresenters */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCEB837E1D00AEF7001283FC /* Build configuration list for PBXNativeTarget "ReactiveCocoaPresenters" */;
+			buildPhases = (
+				CCEB83741D00AEF7001283FC /* Sources */,
+				CCEB83751D00AEF7001283FC /* Frameworks */,
+				CCEB83761D00AEF7001283FC /* Headers */,
+				CCEB83771D00AEF7001283FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReactiveCocoaPresenters;
+			productName = ReactiveCocoaPresenters;
+			productReference = CCEB83791D00AEF7001283FC /* ReactiveCocoaPresenters.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -127,6 +200,9 @@
 				ORGANIZATIONNAME = "Ilya Laryionau";
 				TargetAttributes = {
 					CC076EAF1CFB5DA800994752 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					CCEB83781D00AEF7001283FC = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -144,12 +220,20 @@
 			projectRoot = "";
 			targets = (
 				CC076EAF1CFB5DA800994752 /* ReactivePresenters */,
+				CCEB83781D00AEF7001283FC /* ReactiveCocoaPresenters */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CC076EAE1CFB5DA800994752 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCEB83771D00AEF7001283FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -186,6 +270,18 @@
 				CC3651A41CFB65F3008746F9 /* AnonymousPresenter.swift in Sources */,
 				CC3651A01CFB626F008746F9 /* PresenterProtocol.swift in Sources */,
 				CC076EBC1CFB5E6C00994752 /* Presenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCEB83741D00AEF7001283FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCEB83821D00AF13001283FC /* UIBarButton.swift in Sources */,
+				CCEB83901D00B088001283FC /* UITextField.swift in Sources */,
+				CCEB838A1D00AFC6001283FC /* UIButton.swift in Sources */,
+				CCEB838E1D00B036001283FC /* UILabel.swift in Sources */,
+				CCEB838C1D00AFFB001283FC /* UIControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +422,51 @@
 			};
 			name = Release;
 		};
+		CCEB837F1D00AEF7001283FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ReactiveCocoaPresenters/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ilya-laryionau.ReactiveCocoaPresenters";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CCEB83801D00AEF7001283FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ReactiveCocoaPresenters/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ilya-laryionau.ReactiveCocoaPresenters";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -346,6 +487,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		CCEB837E1D00AEF7001283FC /* Build configuration list for PBXNativeTarget "ReactiveCocoaPresenters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCEB837F1D00AEF7001283FC /* Debug */,
+				CCEB83801D00AEF7001283FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
