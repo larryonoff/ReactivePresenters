@@ -17,6 +17,12 @@ public protocol PresenterProtocol {
     func present(element: Element) -> Disposable?
 }
 
+extension PresenterProtocol where Element == Void {
+    public static var empty: Presenter<Void> {
+        return Presenter { return nil }
+    }
+}
+
 infix operator <~ {
     associativity right
 
