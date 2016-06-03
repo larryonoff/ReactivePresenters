@@ -23,6 +23,13 @@ extension PresenterProtocol where Element == Void {
     }
 }
 
+extension PresenterProtocol {
+    ///
+    public func anonymized(with element: Element) -> Presenter<Void> {
+        return Presenter<Void> { _ in self.present(element) }
+    }
+}
+
 infix operator <~ {
     associativity right
 

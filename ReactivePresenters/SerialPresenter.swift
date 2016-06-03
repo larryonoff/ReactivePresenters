@@ -16,7 +16,7 @@ public final class SerialPresenter<Element>: PresenterProtocol {
         self.binding = binding
     }
     
-    public init(_ binding: (Element) -> AnonymousPresenter) {
+    public init(_ binding: (Element) -> Presenter<Void>) {
         self.binding = { element in
             return binding(element).binding()
         }
