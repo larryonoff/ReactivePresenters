@@ -20,7 +20,7 @@ public class TableViewCell: UITableViewCell {
 
     //
 
-    override func prepareForReuse() {
+    public override func prepareForReuse() {
         prepareForReusePipe.1.sendNext()
         
         super.prepareForReuse()
