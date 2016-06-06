@@ -12,6 +12,7 @@
 		CC076EC11CFB5F8700994752 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC076EBF1CFB5F8600994752 /* Result.framework */; };
 		CC3651A01CFB626F008746F9 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC36519F1CFB626F008746F9 /* PresenterProtocol.swift */; };
 		CC3651A61CFB675E008746F9 /* SerialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3651A51CFB675E008746F9 /* SerialPresenter.swift */; };
+		CCE2DCD51D058ACF004B0D03 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2DCD41D058ACF004B0D03 /* UITableViewCell.swift */; };
 		CCEB83821D00AF13001283FC /* UIBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB83811D00AF13001283FC /* UIBarButton.swift */; };
 		CCEB83861D00AF4C001283FC /* ReactivePresenters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC076EB01CFB5DA800994752 /* ReactivePresenters.framework */; };
 		CCEB83871D00AF5A001283FC /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC076EBE1CFB5F8600994752 /* ReactiveCocoa.framework */; };
@@ -31,6 +32,7 @@
 		CC36519F1CFB626F008746F9 /* PresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
 		CC3651A51CFB675E008746F9 /* SerialPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialPresenter.swift; sourceTree = "<group>"; };
 		CC3651A81CFB6CA6008746F9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCE2DCD41D058ACF004B0D03 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		CCEB83791D00AEF7001283FC /* ReactiveCocoaPresenters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveCocoaPresenters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCEB83811D00AF13001283FC /* UIBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButton.swift; sourceTree = "<group>"; };
 		CCEB83841D00AF2E001283FC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				CCEB83891D00AFC6001283FC /* UIButton.swift */,
 				CCEB838B1D00AFFB001283FC /* UIControl.swift */,
 				CCEB838D1D00B036001283FC /* UILabel.swift */,
+				CCE2DCD41D058ACF004B0D03 /* UITableViewCell.swift */,
 				CCEB838F1D00B088001283FC /* UITextField.swift */,
 				CCEB83951D00B3CB001283FC /* UIViewController.swift */,
 				CCEB83831D00AF2E001283FC /* Supporting Files */,
@@ -281,6 +284,7 @@
 				CCEB83961D00B3CB001283FC /* UIViewController.swift in Sources */,
 				CCEB838A1D00AFC6001283FC /* UIButton.swift in Sources */,
 				CCEB838E1D00B036001283FC /* UILabel.swift in Sources */,
+				CCE2DCD51D058ACF004B0D03 /* UITableViewCell.swift in Sources */,
 				CCEB838C1D00AFFB001283FC /* UIControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
