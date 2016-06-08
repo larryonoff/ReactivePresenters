@@ -12,6 +12,7 @@
 		CC076EC11CFB5F8700994752 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC076EBF1CFB5F8600994752 /* Result.framework */; };
 		CC3651A01CFB626F008746F9 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC36519F1CFB626F008746F9 /* PresenterProtocol.swift */; };
 		CC3651A61CFB675E008746F9 /* SerialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3651A51CFB675E008746F9 /* SerialPresenter.swift */; };
+		CCC2B87A1D08986700574B61 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC2B8791D08986700574B61 /* Presentable.swift */; };
 		CCE2DCD51D058ACF004B0D03 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2DCD41D058ACF004B0D03 /* UITableViewCell.swift */; };
 		CCEB83821D00AF13001283FC /* UIBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB83811D00AF13001283FC /* UIBarButton.swift */; };
 		CCEB83861D00AF4C001283FC /* ReactivePresenters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC076EB01CFB5DA800994752 /* ReactivePresenters.framework */; };
@@ -32,6 +33,7 @@
 		CC36519F1CFB626F008746F9 /* PresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
 		CC3651A51CFB675E008746F9 /* SerialPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialPresenter.swift; sourceTree = "<group>"; };
 		CC3651A81CFB6CA6008746F9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCC2B8791D08986700574B61 /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		CCE2DCD41D058ACF004B0D03 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		CCEB83791D00AEF7001283FC /* ReactiveCocoaPresenters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveCocoaPresenters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCEB83811D00AF13001283FC /* UIBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButton.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				CC36519F1CFB626F008746F9 /* PresenterProtocol.swift */,
 				CC076EBB1CFB5E6C00994752 /* Presenter.swift */,
+				CCC2B8791D08986700574B61 /* Presentable.swift */,
 				CC3651A51CFB675E008746F9 /* SerialPresenter.swift */,
 				CC3651A71CFB6CA6008746F9 /* Supporting Files */,
 			);
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC3651A61CFB675E008746F9 /* SerialPresenter.swift in Sources */,
+				CCC2B87A1D08986700574B61 /* Presentable.swift in Sources */,
 				CC3651A01CFB626F008746F9 /* PresenterProtocol.swift in Sources */,
 				CC076EBC1CFB5E6C00994752 /* Presenter.swift in Sources */,
 			);
