@@ -30,6 +30,73 @@ extension PresenterProtocol {
     }
 }
 
+extension PresenterProtocol {
+
+    // Subscribes and presents next element with a given presenter by the replacing the previous one.
+    func present<E: ErrorType>(signal signal: Signal<Element, E>) -> Disposable? {
+        let serialDisposable = SerialDisposable()
+
+        let disposable = CompositeDisposable()
+        disposable += serialDisposable
+        disposable += signal
+            .observeNext {
+                serialDisposable.innerDisposable = self.present($0)
+            }
+
+        return disposable
+    }
+
+    // Subscribes and presents next `Optional` element with a given presenter by the replacing the previous one.
+    func present<E: ErrorType>(signal signal: Signal<Element?, E>) -> Disposable? {
+        let serialDisposable = SerialDisposable()
+        
+        let disposable = CompositeDisposable()
+        disposable += serialDisposable
+        disposable += signal
+            .observeNext {
+                if let element = $0 {
+                    serialDisposable.innerDisposable = self.present(element)
+                } else {
+                    serialDisposable.innerDisposable = nil
+                }
+            }
+        
+        return disposable
+    }
+
+    // Subscribes and presents next element with a given presenter by the replacing the previous one.
+    func present<E: ErrorType>(producer producer: SignalProducer<Element, E>) -> Disposable? {
+        let serialDisposable = SerialDisposable()
+        
+        let disposable = CompositeDisposable()
+        disposable += serialDisposable
+        disposable += producer
+            .startWithNext {
+                serialDisposable.innerDisposable = self.present($0)
+            }
+        
+        return disposable
+    }
+    
+    // Subscribes and presents next `Optional` element with a given presenter by the replacing the previous one.
+    func present<E: ErrorType>(producer producer: SignalProducer<Element?, E>) -> Disposable? {
+        let serialDisposable = SerialDisposable()
+        
+        let disposable = CompositeDisposable()
+        disposable += serialDisposable
+        disposable += producer
+            .startWithNext {
+                if let element = $0 {
+                    serialDisposable.innerDisposable = self.present(element)
+                } else {
+                    serialDisposable.innerDisposable = nil
+                }
+            }
+        
+        return disposable
+    }
+}
+
 infix operator <~ {
     associativity right
 
@@ -44,29 +111,22 @@ public func <~ <P: PresenterProtocol>(presenter: P, element: P.Element) -> Dispo
 
 // Subscribes and presents next element with a given presenter by the replacing the previous one.
 public func <~ <P: PresenterProtocol, E: ErrorType>(presenter: P, signal: Signal<P.Element, E>) -> Disposable? {
-    let serialDisposable = SerialDisposable()
-    
-    let disposable = CompositeDisposable()
-    disposable += serialDisposable
-    disposable += signal
-        .observeNext {
-            serialDisposable.innerDisposable = presenter.present($0)
-        }
-    
-    return disposable
+    return presenter.present(signal: signal)
+}
+
+// Subscribes and presents next `Optional` element with a given presenter by the replacing the previous one.
+public func <~ <P: PresenterProtocol, E: ErrorType>(presenter: P, signal: Signal<P.Element?, E>) -> Disposable? {
+    return presenter.present(signal: signal)
 }
 
 // Subscribes and presents next element with a given presenter by the replacing the previous one.
 public func <~ <P: PresenterProtocol, E: ErrorType>(presenter: P, producer: SignalProducer<P.Element, E>) -> Disposable? {
-    let serialDisposable = SerialDisposable()
-    
-    return CompositeDisposable([
-        serialDisposable,
-        producer
-            .startWithNext {
-                serialDisposable.innerDisposable = presenter.present($0)
-            }
-    ])
+    return presenter.present(producer: producer)
+}
+
+// Subscribes and presents next `Optional` element with a given presenter by the replacing the previous one.
+public func <~ <P: PresenterProtocol, E: ErrorType>(presenter: P, producer: SignalProducer<P.Element?, E>) -> Disposable? {
+    return presenter.present(producer: producer)
 }
 
 // Subscribes and presents next element with a given presenter by the replacing the previous one.
