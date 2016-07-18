@@ -33,7 +33,7 @@ extension PresenterProtocol {
 extension PresenterProtocol {
 
     // Subscribes and presents next element with a given presenter by the replacing the previous one.
-    func present<E: ErrorType>(signal signal: Signal<Element, E>) -> Disposable? {
+    func present<Error: ErrorType>(signal signal: Signal<Element, Error>) -> Disposable? {
         let serialDisposable = SerialDisposable()
 
         let disposable = CompositeDisposable()
@@ -47,7 +47,7 @@ extension PresenterProtocol {
     }
 
     // Subscribes and presents next `Optional` element with a given presenter by the replacing the previous one.
-    func present<E: ErrorType>(signal signal: Signal<Element?, E>) -> Disposable? {
+    func present<Error: ErrorType>(signal signal: Signal<Element?, Error>) -> Disposable? {
         let serialDisposable = SerialDisposable()
         
         let disposable = CompositeDisposable()
@@ -65,7 +65,7 @@ extension PresenterProtocol {
     }
 
     // Subscribes and presents next element with a given presenter by the replacing the previous one.
-    func present<E: ErrorType>(producer producer: SignalProducer<Element, E>) -> Disposable? {
+    func present<Error: ErrorType>(producer producer: SignalProducer<Element, Error>) -> Disposable? {
         let serialDisposable = SerialDisposable()
         
         let disposable = CompositeDisposable()
@@ -79,7 +79,7 @@ extension PresenterProtocol {
     }
     
     // Subscribes and presents next `Optional` element with a given presenter by the replacing the previous one.
-    func present<E: ErrorType>(producer producer: SignalProducer<Element?, E>) -> Disposable? {
+    func present<Error: ErrorType>(producer producer: SignalProducer<Element?, Error>) -> Disposable? {
         let serialDisposable = SerialDisposable()
         
         let disposable = CompositeDisposable()
