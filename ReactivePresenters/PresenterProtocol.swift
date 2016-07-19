@@ -39,8 +39,12 @@ extension PresenterProtocol {
         let disposable = CompositeDisposable()
         disposable += serialDisposable
         disposable += signal
-            .observeNext {
-                serialDisposable.innerDisposable = self.present($0)
+            .observeResult {
+                if let value = $0.value {
+                    serialDisposable.innerDisposable = self.present(value)
+                } else {
+                    serialDisposable.innerDisposable = nil
+                }
             }
 
         return disposable
@@ -53,9 +57,9 @@ extension PresenterProtocol {
         let disposable = CompositeDisposable()
         disposable += serialDisposable
         disposable += signal
-            .observeNext {
-                if let element = $0 {
-                    serialDisposable.innerDisposable = self.present(element)
+            .observeResult {
+                if let value = $0.value?.optional {
+                    serialDisposable.innerDisposable = self.present(value)
                 } else {
                     serialDisposable.innerDisposable = nil
                 }
@@ -71,10 +75,14 @@ extension PresenterProtocol {
         let disposable = CompositeDisposable()
         disposable += serialDisposable
         disposable += producer
-            .startWithNext {
-                serialDisposable.innerDisposable = self.present($0)
+            .startWithResult {
+                if let value = $0.value {
+                    serialDisposable.innerDisposable = self.present(value)
+                } else {
+                    serialDisposable.innerDisposable = nil
+                }
             }
-        
+
         return disposable
     }
     
@@ -85,9 +93,9 @@ extension PresenterProtocol {
         let disposable = CompositeDisposable()
         disposable += serialDisposable
         disposable += producer
-            .startWithNext {
-                if let element = $0 {
-                    serialDisposable.innerDisposable = self.present(element)
+            .startWithResult {
+                if let value = $0.value?.optional {
+                    serialDisposable.innerDisposable = self.present(value)
                 } else {
                     serialDisposable.innerDisposable = nil
                 }
